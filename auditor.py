@@ -5,6 +5,8 @@ import re
 
 def parser():
     os.chdir("/home/jamie/Documents/things/DataPDF")
+    
+    # Html was the easiest to parse as it kept the data in the best structure compared to the other options.
     for file in glob.glob("*.pdf"):
         os.system("pdftotext -raw -htmlmeta " + "/home/jamie/Documents/things/DataPDF/" + file)
 
